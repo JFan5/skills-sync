@@ -30,6 +30,15 @@ A Claude Code plugin that syncs your skills (`~/.claude/skills/`) and installed 
 claude --plugin-dir ./skills-sync
 ```
 
+### Update
+
+```
+/plugin uninstall skills-sync@skills-sync
+/plugin install skills-sync@skills-sync
+```
+
+Then restart Claude Code.
+
 ## Quick Start
 
 ```
