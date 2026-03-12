@@ -1,0 +1,5 @@
+{
+  "name": "skills-sync",
+  "version": "1.0.0",
+  "description": "Sync Claude Code skills across computers via GitHub"
+}
