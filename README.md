@@ -33,11 +33,10 @@ claude --plugin-dir ./skills-sync
 ### Update
 
 ```
-/plugin uninstall skills-sync@skills-sync
-/plugin install skills-sync@skills-sync
+/skills-sync:update
 ```
 
-Then restart Claude Code.
+Then run `/plugin install skills-sync@skills-sync` and restart Claude Code.
 
 ## Quick Start
 
@@ -67,6 +66,7 @@ On another machine:
 | `/skills-sync:pull [skill-name\|--all] [--force]` | Pull skills from GitHub |
 | `/skills-sync:push-plugins` | Backup installed plugins & marketplace list to GitHub |
 | `/skills-sync:pull-plugins` | Restore plugins list and show install commands |
+| `/skills-sync:update` | Update skills-sync plugin to latest version |
 
 ## How It Works
 
