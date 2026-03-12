@@ -1,0 +1,17 @@
+{
+  "name": "skills-sync",
+  "owner": {
+    "name": "Jerry Fan"
+  },
+  "metadata": {
+    "description": "Sync Claude Code skills across computers via GitHub",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "skills-sync",
+      "source": ".",
+      "description": "Sync Claude Code skills across computers via GitHub"
+    }
+  ]
+}
