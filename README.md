@@ -19,7 +19,7 @@ A Claude Code plugin that syncs your skills (`~/.claude/skills/`) across devices
 ### From the Plugin Marketplace
 
 ```
-/plugin marketplace add <user>/skills-sync
+/plugin marketplace add JFan5/skills-sync
 /plugin install skills-sync
 ```
 
