@@ -225,7 +225,7 @@ list_skill_files() {
     return 1
   fi
 
-  find "${skill_dir}" -type f -printf '%P\n' | sort
+  find "${skill_dir}" -type f | sed "s|^${skill_dir}/||" | sort
 }
 
 list_remote_skill_files() {
