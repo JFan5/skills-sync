@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "skills-sync",
-      "source": ".",
+      "source": "./",
       "description": "Sync Claude Code skills across computers via GitHub"
     }
   ]
