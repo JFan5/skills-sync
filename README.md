@@ -1,10 +1,11 @@
 # skills-sync
 
-A Claude Code plugin that syncs your skills (`~/.claude/skills/`) across devices via GitHub.
+A Claude Code plugin that syncs your skills (`~/.claude/skills/`) and installed plugins across devices via GitHub.
 
 ## Features
 
 - **Push/Pull** skills to/from a GitHub repo
+- **Sync plugins** — backup and restore your installed plugin list across devices
 - **Diff** local vs remote to see what's changed
 - **Conflict detection** with interactive resolution
 - **Zero dependencies** beyond `gh` CLI (no build step, no runtime)
@@ -34,6 +35,7 @@ claude --plugin-dir ./skills-sync
 ```
 /skills-sync:setup           # Configure GitHub repo (creates if needed)
 /skills-sync:push --all      # Upload all local skills
+/skills-sync:push-plugins    # Backup installed plugins list
 ```
 
 On another machine:
@@ -41,6 +43,7 @@ On another machine:
 ```
 /skills-sync:setup           # Same repo name
 /skills-sync:pull --all      # Download all skills
+/skills-sync:pull-plugins    # Get plugin install commands
 ```
 
 ## Commands
@@ -53,6 +56,8 @@ On another machine:
 | `/skills-sync:diff [skill-name]` | Unified diff of local vs remote |
 | `/skills-sync:push [skill-name\|--all]` | Push skills to GitHub |
 | `/skills-sync:pull [skill-name\|--all] [--force]` | Pull skills from GitHub |
+| `/skills-sync:push-plugins` | Backup installed plugins & marketplace list to GitHub |
+| `/skills-sync:pull-plugins` | Restore plugins list and show install commands |
 
 ## How It Works
 
