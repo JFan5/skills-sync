@@ -1,13 +1,13 @@
 ---
 name: list
-description: List local and/or remote skills
+description: List local and/or remote skills and plugins
 arguments:
   - name: scope
-    description: "Scope to list: local, remote, or all (default: all)"
+    description: "Scope to list: all, skills, plugins, local, or remote (default: all)"
     required: false
 ---
 
-List Claude Code skills, comparing what's available locally vs remotely on GitHub.
+List Claude Code skills and installed plugins, comparing what's available locally vs remotely on GitHub.
 
 Run the list script:
 
