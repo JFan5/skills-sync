@@ -42,9 +42,15 @@ main() {
 
     # Initialize with a README so the contents API works
     echo "Initializing repository..."
+    local readme_content
+    if [[ "$(uname -s)" == "Darwin" ]]; then
+      readme_content=$(printf "# Claude Skills\n\nSynced via [skills-sync](https://github.com/JFan5/skills-sync).\n" | base64)
+    else
+      readme_content=$(printf "# Claude Skills\n\nSynced via [skills-sync](https://github.com/JFan5/skills-sync).\n" | base64 -w0)
+    fi
     gh api -X PUT "/repos/${full_repo}/contents/README.md" \
       -f message="Initial commit" \
-      -f content="$(echo -n "# Claude Skills\n\nSynced via [skills-sync](https://github.com/skills-sync)." | base64_encode /dev/stdin 2>/dev/null || echo -n "# Claude Skills" | base64)" \
+      -f content="${readme_content}" \
       -f branch="main" --silent 2>/dev/null || true
     echo "✓ Repository initialized"
   fi
